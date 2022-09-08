@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.0"
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.github.blizz2night.libjpegturbo"
-        minSdkVersion 19
-        targetSdkVersion 29
+        minSdkVersion 31
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
 
@@ -27,18 +27,18 @@ android {
             }
             dimension 'abi'
         }
-
-        armv7a {
-            externalNativeBuild {
-                cmake {
-                    arguments  "-DCMAKE_ASM_FLAGS=--target=arm-linux-androideabi${compileSdkVersion}"
-                }
-                ndk{
-                    abiFilters 'armeabi-v7a'
-                }
-            }
-            dimension 'abi'
-        }
+//
+//        armv7a {
+//            externalNativeBuild {
+//                cmake {
+//                    arguments  "-DCMAKE_ASM_FLAGS=--target=arm-linux-androideabi${compileSdkVersion}"
+//                }
+//                ndk{
+//                    abiFilters 'armeabi-v7a'
+//                }
+//            }
+//            dimension 'abi'
+//        }
     }
 
     buildTypes {
